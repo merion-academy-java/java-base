@@ -52,5 +52,9 @@ public class Main {
         duck.isTheBirdFlying();
         duck.landing();
         duck.isTheBirdFlying();
+
+        // Lesson #11 - Аннотации. Популярные аннотации @Override
+        catFromLesson8.voice();
+
     }
 }
