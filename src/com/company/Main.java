@@ -18,5 +18,9 @@ public class Main {
 
         Cat cat = new Cat();
         cat.voice();
+
+        // Lesson #7 - Пакеты Java
+        com.company.lesson7.Cat catFromLesson7 = new com.company.lesson7.Cat();
+        catFromLesson7.voice();
     }
 }
