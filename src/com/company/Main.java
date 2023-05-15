@@ -3,6 +3,7 @@ package com.company;
 import com.company.lesson5.POJO;
 import com.company.lesson6.Animal;
 import com.company.lesson6.Cat;
+import com.company.lesson8.Dog;
 
 public class Main {
 
@@ -22,5 +23,9 @@ public class Main {
         // Lesson #7 - Пакеты Java
         com.company.lesson7.Cat catFromLesson7 = new com.company.lesson7.Cat();
         catFromLesson7.voice();
+
+        // Lesson #8 - Методы
+        com.company.lesson8.Cat catFromLesson8 = new com.company.lesson8.Cat("Barsik", 20);
+        System.out.println(catFromLesson8.jumpHeight());
     }
 }
