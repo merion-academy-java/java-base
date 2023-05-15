@@ -41,7 +41,8 @@ public class Main {
         dog.goToStick(5);
         dog.whereTheDog();
         dog.voice();
-        
+
+        // Lesson #10 - Наследование
         Dog homelessDog = Dog.ofHomeless(100);
         homelessDog.voice();
 
