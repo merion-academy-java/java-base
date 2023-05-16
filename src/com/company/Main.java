@@ -6,6 +6,7 @@ import com.company.lesson6.Animal;
 import com.company.lesson6.Cat;
 import com.company.lesson8.Dog;
 import com.company.lesson8.Duck;
+import com.company.lesson8.MoveType;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -128,5 +129,15 @@ public class Main {
         System.out.println("Operation 'equals' return: " + dogSharik.equals(dogSharik));
         System.out.println("Operation 'equals' return: " + dogSharik.equals(dogBobik));
         System.out.println("Operation 'equals' return: " + dogSharik.equals(dogsharikVar1));
+
+
+        // Lesson #22 - Enum. Перечисления
+        System.out.println(" ");
+        System.out.println(duck.getMoveType());
+        System.out.println(dog.getMoveType().getValue());
+
+        if(dog.getMoveType() == MoveType.WALK){
+            System.out.println("Может ходить");
+        }
     }
 }

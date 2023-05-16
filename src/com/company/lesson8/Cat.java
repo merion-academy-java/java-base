@@ -2,11 +2,11 @@ package com.company.lesson8;
 
 public class Cat  extends Animal {
     public Cat(String name, Integer weight) {
-        super(name, weight);
+        super(name, weight, MoveType.WALK);
     }
 
     public Cat() {
-        super();
+        super(MoveType.WALK);
     }
 
     private Integer heightCoefficient(Integer weight){

@@ -6,16 +6,16 @@ class Animal {
     protected String name;
     protected Integer weight;
     protected Integer currentPosition = 0;
-    protected Boolean canFly = false;
+    protected MoveType moveType;
 
-    public Animal(String name, Integer weight) {
+    public Animal(String name, Integer weight, MoveType moveType) {
         this.name = name;
         this.weight = weight;
-        this.canFly = false;
+        this.moveType = moveType;
     }
 
-    public Animal() {
-        this.canFly = false;
+    public Animal(MoveType moveType) {
+        this.moveType = moveType;
     }
 
     public void voice(){
@@ -50,12 +50,12 @@ class Animal {
         this.currentPosition = currentPosition;
     }
 
-    public Boolean getCanFly() {
-        return canFly;
+    public MoveType getMoveType() {
+        return moveType;
     }
 
-    public void setCanFly(Boolean canFly) {
-        this.canFly = canFly;
+    public void setMoveType(MoveType moveType) {
+        this.moveType = moveType;
     }
 
     @Override
@@ -63,11 +63,11 @@ class Animal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Animal animal = (Animal) o;
-        return Objects.equals(name, animal.name) && Objects.equals(weight, animal.weight) && Objects.equals(currentPosition, animal.currentPosition) && canFly.equals(animal.canFly);
+        return Objects.equals(name, animal.name) && Objects.equals(weight, animal.weight) && Objects.equals(currentPosition, animal.currentPosition) && moveType.equals(animal.moveType);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, weight, currentPosition, canFly);
+        return Objects.hash(name, weight, currentPosition, moveType);
     }
 }

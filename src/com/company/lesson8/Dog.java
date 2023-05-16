@@ -5,42 +5,43 @@ import java.util.List;
 
 public class Dog extends Animal {
     public Dog(String name, Integer weight) {
-        super(name, weight);
+        super(name, weight, MoveType.WALK);
     }
 
     public Dog() {
-        super();
+        super(MoveType.WALK);
     }
 
     /**
      * Идем до позиции палки. Что бы дойти до палки, нужно определить разницу между текущей позицией и позицией палки
+     *
      * @param stickPosition - позиция палки
      */
-    public void goToStick(Integer stickPosition){
+    public void goToStick(Integer stickPosition) {
         Integer delta = stickPosition - this.currentPosition;
         this.runForward(delta);
     }
 
-    public void whereTheDog(){
+    public void whereTheDog() {
         System.out.println("Current position: " + this.currentPosition);
     }
 
-    public static Dog of(String name, Integer weight){
+    public static Dog of(String name, Integer weight) {
         return new Dog(name, weight);
     }
 
-    public static Dog ofHomeless(Integer weight){
+    public static Dog ofHomeless(Integer weight) {
         Dog dog = new Dog();
         dog.weight = weight;
         return dog;
     }
 
     @Override
-    public void voice(){
+    public void voice() {
         System.out.println("wow!");
     }
 
-    public static List<Dog> randomArray(){
+    public static List<Dog> randomArray() {
         List<Dog> dogs = new ArrayList<>();
 
         dogs.add(Dog.of("Sharik", 3));
