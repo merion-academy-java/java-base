@@ -7,6 +7,7 @@ import com.company.lesson8.Dog;
 import com.company.lesson8.Duck;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -70,15 +71,29 @@ public class Main {
                 Dog.ofHomeless(3),
                 Dog.ofHomeless(5)
         });
-        System.out.println(dogsHomless.size());
-        System.out.println(dogsHomless.get(0));
-        System.out.println(dogsHomless.get(1));
-        System.out.println(dogsHomless.get(2));
+        for(Dog dogItem : dogsHomless){
+            System.out.println(dogItem);
+        }
 
         System.out.println("   ");
         List<Dog> dogs = Dog.randomArray();
-        System.out.println(dogs.get(0));
-        System.out.println(dogs.get(1));
-        System.out.println(dogs.get(2));
+        for (int i = 0; i < dogs.size(); i++) {
+            System.out.println(dogs.get(i));
+        }
+
+        // Lesson #15 - Циклы
+        List<Dog> dogsLinkedList = new LinkedList<>();
+        dogsLinkedList.add(Dog.ofHomeless(10));
+        dogsLinkedList.add(Dog.ofHomeless(10));
+        dogsLinkedList.add(Dog.ofHomeless(10));
+        dogsLinkedList.add(Dog.ofHomeless(10));
+        dogsLinkedList.add(Dog.ofHomeless(10));
+
+        System.out.println("   ");
+        int indexLinkedList = 0;
+        while (indexLinkedList < dogsLinkedList.size()){
+            System.out.println(dogsLinkedList.get(indexLinkedList));
+            indexLinkedList++;
+        }
     }
 }
