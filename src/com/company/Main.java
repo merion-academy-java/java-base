@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.lesson16.SwitchExample;
+import com.company.lesson23.StringExample;
 import com.company.lesson5.POJO;
 import com.company.lesson6.Animal;
 import com.company.lesson6.Cat;
@@ -139,5 +140,9 @@ public class Main {
         if(dog.getMoveType() == MoveType.WALK){
             System.out.println("Может ходить");
         }
+
+        // Lesson #23 - String
+        System.out.println(" ");
+        StringExample.run();
     }
 }
