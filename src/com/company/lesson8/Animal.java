@@ -1,5 +1,7 @@
 package com.company.lesson8;
 
+import java.util.Objects;
+
 class Animal {
     protected String name;
     protected Integer weight;
@@ -54,5 +56,18 @@ class Animal {
 
     public void setCanFly(Boolean canFly) {
         this.canFly = canFly;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return Objects.equals(name, animal.name) && Objects.equals(weight, animal.weight) && Objects.equals(currentPosition, animal.currentPosition) && canFly.equals(animal.canFly);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, weight, currentPosition, canFly);
     }
 }

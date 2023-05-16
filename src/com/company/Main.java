@@ -79,6 +79,9 @@ public class Main {
             // Lesson #19 - Getters & Setters
             dogItem.setName(String.valueOf((new Random()).nextInt(10)));
             System.out.println("Dog homeless number: " + dogItem.getName());
+
+            // Lesson #20 - equals и hashcode методы
+            System.out.println("Dog homeless hash code: " + dogItem.hashCode());
         }
 
         System.out.println("   ");
@@ -110,5 +113,20 @@ public class Main {
 
         // Lesson #17 - Уровни доступа
         // com.company.lesson8.Animal animalPrivateExample = new com.company.lesson8.Animal();
+
+        // Lesson #20 - equals и hashcode методы
+        Dog dogSharik = new Dog("Sharik", 5);
+        Dog dogBobik = new Dog("Bobik", 4);
+        Dog dogsharikVar1 = new Dog("Sharik", 5);
+
+        System.out.println("Operation '==' return: " + (dogSharik == dogSharik));
+        System.out.println("Operation '==' return: " + (dogSharik == dogBobik));
+        System.out.println("Operation '==' return: " + (dogSharik == dogsharikVar1));
+
+        System.out.println(" ");
+        
+        System.out.println("Operation 'equals' return: " + dogSharik.equals(dogSharik));
+        System.out.println("Operation 'equals' return: " + dogSharik.equals(dogBobik));
+        System.out.println("Operation 'equals' return: " + dogSharik.equals(dogsharikVar1));
     }
 }
