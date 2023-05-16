@@ -10,6 +10,7 @@ import com.company.lesson8.Duck;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
 
@@ -67,13 +68,17 @@ public class Main {
 
 
         // Lesson #13 - Массивы
-        List<Dog> dogsHomless = Arrays.asList(new Dog[]{
+        List<Dog> dogsHomeless = Arrays.asList(new Dog[]{
                 Dog.ofHomeless(2),
                 Dog.ofHomeless(3),
                 Dog.ofHomeless(5)
         });
-        for (Dog dogItem : dogsHomless) {
+        for (Dog dogItem : dogsHomeless) {
             System.out.println(dogItem);
+
+            // Lesson #19 - Getters & Setters
+            dogItem.setName(String.valueOf((new Random()).nextInt(10)));
+            System.out.println("Dog homeless number: " + dogItem.getName());
         }
 
         System.out.println("   ");
@@ -100,7 +105,7 @@ public class Main {
         // Lesson #16 - Switch
         System.out.println("   ");
         for (int i = 0; i < 100; i++) {
-            SwitchExample.run();
+            // SwitchExample.run();
         }
 
         // Lesson #17 - Уровни доступа
