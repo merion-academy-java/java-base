@@ -60,5 +60,22 @@ public class Main {
         // Lesson #11 - Аннотации. Популярные аннотации @Override
         catFromLesson8.voice();
 
+
+        // Lesson #13 - Массивы
+        Dog[] dogsHomless = new Dog[]{
+                Dog.ofHomeless(2),
+                Dog.ofHomeless(3),
+                Dog.ofHomeless(5)
+        };
+        System.out.println(dogsHomless.length);
+        System.out.println(dogsHomless[0]);
+        System.out.println(dogsHomless[1]);
+        System.out.println(dogsHomless[2]);
+
+        System.out.println("  ");
+        Dog[] dogs = Dog.randomArray();
+        System.out.println(dogs[0]);
+        System.out.println(dogs[1]);
+        System.out.println(dogs[2]);
     }
 }
