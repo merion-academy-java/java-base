@@ -124,7 +124,7 @@ public class Main {
         System.out.println("Operation '==' return: " + (dogSharik == dogsharikVar1));
 
         System.out.println(" ");
-        
+
         System.out.println("Operation 'equals' return: " + dogSharik.equals(dogSharik));
         System.out.println("Operation 'equals' return: " + dogSharik.equals(dogBobik));
         System.out.println("Operation 'equals' return: " + dogSharik.equals(dogsharikVar1));
