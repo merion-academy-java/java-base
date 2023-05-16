@@ -72,7 +72,7 @@ public class Main {
                 Dog.ofHomeless(3),
                 Dog.ofHomeless(5)
         });
-        for(Dog dogItem : dogsHomless){
+        for (Dog dogItem : dogsHomless) {
             System.out.println(dogItem);
         }
 
@@ -92,15 +92,18 @@ public class Main {
 
         System.out.println("   ");
         int indexLinkedList = 0;
-        while (indexLinkedList < dogsLinkedList.size()){
+        while (indexLinkedList < dogsLinkedList.size()) {
             System.out.println(dogsLinkedList.get(indexLinkedList));
             indexLinkedList++;
         }
 
         // Lesson #16 - Switch
         System.out.println("   ");
-        for(int i = 0; i < 100; i++){
+        for (int i = 0; i < 100; i++) {
             SwitchExample.run();
         }
+
+        // Lesson #17 - Уровни доступа
+        // com.company.lesson8.Animal animalPrivateExample = new com.company.lesson8.Animal();
     }
 }
