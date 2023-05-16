@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.lesson16.SwitchExample;
 import com.company.lesson5.POJO;
 import com.company.lesson6.Animal;
 import com.company.lesson6.Cat;
@@ -94,6 +95,12 @@ public class Main {
         while (indexLinkedList < dogsLinkedList.size()){
             System.out.println(dogsLinkedList.get(indexLinkedList));
             indexLinkedList++;
+        }
+
+        // Lesson #16 - Switch
+        System.out.println("   ");
+        for(int i = 0; i < 100; i++){
+            SwitchExample.run();
         }
     }
 }
