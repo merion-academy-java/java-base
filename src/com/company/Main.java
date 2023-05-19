@@ -6,6 +6,7 @@ import com.company.lesson24.TypeConversion;
 import com.company.lesson28.AnonExample;
 import com.company.lesson30.LambdaExample;
 import com.company.lesson31.StreamExample;
+import com.company.lesson32.MyFirstThread;
 import com.company.lesson5.POJO;
 import com.company.lesson8.*;
 
@@ -168,5 +169,14 @@ public class Main {
 
         // Lesson #31 - Stream API
         StreamExample.run();
+
+        // Lesson #32 - Thread
+        MyFirstThread thread = new MyFirstThread();
+        thread.start();
+
+        MyFirstThread.showThreads();
+        MyFirstThread.showThreads();
+        MyFirstThread.showThreads();
+        MyFirstThread.showThreads();
     }
 }
