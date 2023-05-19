@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.lesson16.SwitchExample;
 import com.company.lesson23.StringExample;
+import com.company.lesson24.TypeConversion;
 import com.company.lesson5.POJO;
 import com.company.lesson6.Animal;
 import com.company.lesson6.Cat;
@@ -144,5 +145,8 @@ public class Main {
         // Lesson #23 - String
         System.out.println(" ");
         StringExample.run();
+
+        //Lesson #24 - Приведение типов
+        TypeConversion.run();
     }
 }
