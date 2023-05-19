@@ -5,6 +5,7 @@ import com.company.lesson23.StringExample;
 import com.company.lesson24.TypeConversion;
 import com.company.lesson28.AnonExample;
 import com.company.lesson30.LambdaExample;
+import com.company.lesson31.StreamExample;
 import com.company.lesson5.POJO;
 import com.company.lesson8.*;
 
@@ -160,10 +161,12 @@ public class Main {
         try {
             dog.getWeight().setValue(-10);
         } catch (Animal.WeightException ignore) {
-            ignore.printStackTrace();
         }
 
         // Lesson #30 - Лямбда операторы
         LambdaExample.run();
+
+        // Lesson #31 - Stream API
+        StreamExample.run();
     }
 }
