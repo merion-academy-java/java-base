@@ -153,5 +153,13 @@ public class Main {
 
         // Lesson #28 - Анонимные классы
         AnonExample.run();
+
+        // Lesson #29 - исключения
+        dog.setWeight(new Animal.AnimalWeight(10, Animal.AnimalWeight.WeightType.KG));
+        try {
+            dog.getWeight().setValue(-10);
+        } catch (Animal.WeightException ignore) {
+            ignore.printStackTrace();
+        }
     }
 }
