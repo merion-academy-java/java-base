@@ -6,6 +6,7 @@ import com.company.lesson24.TypeConversion;
 import com.company.lesson5.POJO;
 import com.company.lesson6.Animal;
 import com.company.lesson6.Cat;
+import com.company.lesson8.Bird;
 import com.company.lesson8.Dog;
 import com.company.lesson8.Duck;
 import com.company.lesson8.MoveType;
@@ -138,7 +139,7 @@ public class Main {
         System.out.println(duck.getMoveType());
         System.out.println(dog.getMoveType().getValue());
 
-        if(dog.getMoveType() == MoveType.WALK){
+        if (dog.getMoveType() == MoveType.WALK) {
             System.out.println("Может ходить");
         }
 
@@ -146,7 +147,11 @@ public class Main {
         System.out.println(" ");
         StringExample.run();
 
-        //Lesson #24 - Приведение типов
+        // Lesson #24 - Приведение типов
         TypeConversion.run();
+
+        // Lesson #26 - абстрактные классы
+        // NOTE: нельзя создать абстрактный класс
+        // Bird bird = new Bird();
     }
 }

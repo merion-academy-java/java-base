@@ -1,6 +1,6 @@
 package com.company.lesson8;
 
-public class Bird extends Animal implements Flight {
+public abstract class Bird extends Animal implements Flight {
     protected Boolean flyModeActive = false;
 
     public Bird() {
