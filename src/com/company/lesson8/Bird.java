@@ -1,23 +1,34 @@
 package com.company.lesson8;
 
-public class Bird  extends Animal {
+public class Bird extends Animal implements Flight {
     protected Boolean flyModeActive = false;
 
     public Bird() {
         super(MoveType.FLY);
     }
 
-    // NOTE: запрещаем переопределение этого метода в дочерних классах
-    public final void takeOff() {
+//    // NOTE: запрещаем переопределение этого метода в дочерних классах
+//    public final void takeOff() {
+//        flyModeActive = true;
+//    }
+//
+//    // NOTE: запрещаем переопределение этого метода в дочерних классах
+//    public final void landing(){
+//        flyModeActive = false;
+//    }
+
+
+    @Override
+    public void takeOff() {
         flyModeActive = true;
     }
 
-    // NOTE: запрещаем переопределение этого метода в дочерних классах
-    public final void landing(){
+    @Override
+    public void landing() {
         flyModeActive = false;
     }
 
-    public void isTheBirdFlying(){
+    public void isTheBirdFlying() {
         System.out.println(
                 this.flyModeActive == true ? "Duck: flying mode - yes" : "Duck: flying mode - no"
         );
