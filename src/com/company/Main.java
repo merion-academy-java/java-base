@@ -4,12 +4,7 @@ import com.company.lesson16.SwitchExample;
 import com.company.lesson23.StringExample;
 import com.company.lesson24.TypeConversion;
 import com.company.lesson5.POJO;
-import com.company.lesson6.Animal;
-import com.company.lesson6.Cat;
-import com.company.lesson8.Bird;
-import com.company.lesson8.Dog;
-import com.company.lesson8.Duck;
-import com.company.lesson8.MoveType;
+import com.company.lesson8.*;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -25,10 +20,10 @@ public class Main {
         POJO.run();
 
         // Lesson #6 - Экземпляры класса
-        Animal animal = new Animal();
+        com.company.lesson6.Animal animal = new com.company.lesson6.Animal();
         animal.voice();
 
-        Cat cat = new Cat();
+        com.company.lesson6.Cat cat = new com.company.lesson6.Cat();
         cat.voice();
 
         // Lesson #7 - Пакеты Java
@@ -36,7 +31,7 @@ public class Main {
         catFromLesson7.voice();
 
         // Lesson #8 - Методы
-        com.company.lesson8.Cat catFromLesson8 = new com.company.lesson8.Cat("Barsik", 20);
+        Cat catFromLesson8 = new Cat("Barsik", new Animal.AnimalWeight(20, Animal.AnimalWeight.WeightType.KG));
         System.out.println(catFromLesson8.jumpHeight());
 
         // Lesson #9 - Уровни методов в java
@@ -53,7 +48,7 @@ public class Main {
         dog.voice();
 
         // Lesson #10 - Наследование
-        Dog homelessDog = Dog.ofHomeless(100);
+        Dog homelessDog = Dog.ofHomeless(new Animal.AnimalWeight(9, Animal.AnimalWeight.WeightType.KG));
         homelessDog.voice();
 
         Duck duck = new Duck();
@@ -73,10 +68,11 @@ public class Main {
 
         // Lesson #13 - Массивы
         List<Dog> dogsHomeless = Arrays.asList(new Dog[]{
-                Dog.ofHomeless(2),
-                Dog.ofHomeless(3),
-                Dog.ofHomeless(5)
+                Dog.ofHomeless(new Animal.AnimalWeight(20, Animal.AnimalWeight.WeightType.KG)),
+                Dog.ofHomeless(new Animal.AnimalWeight(3, Animal.AnimalWeight.WeightType.KG)),
+                Dog.ofHomeless(new Animal.AnimalWeight(4, Animal.AnimalWeight.WeightType.KG))
         });
+
         for (Dog dogItem : dogsHomeless) {
             System.out.println(dogItem);
 
@@ -96,11 +92,11 @@ public class Main {
 
         // Lesson #15 - Циклы
         List<Dog> dogsLinkedList = new LinkedList<>();
-        dogsLinkedList.add(Dog.ofHomeless(10));
-        dogsLinkedList.add(Dog.ofHomeless(10));
-        dogsLinkedList.add(Dog.ofHomeless(10));
-        dogsLinkedList.add(Dog.ofHomeless(10));
-        dogsLinkedList.add(Dog.ofHomeless(10));
+        dogsLinkedList.add(Dog.ofHomeless(new Animal.AnimalWeight(20, Animal.AnimalWeight.WeightType.KG)));
+        dogsLinkedList.add(Dog.ofHomeless(new Animal.AnimalWeight(20, Animal.AnimalWeight.WeightType.KG)));
+        dogsLinkedList.add(Dog.ofHomeless(new Animal.AnimalWeight(20, Animal.AnimalWeight.WeightType.KG)));
+        dogsLinkedList.add(Dog.ofHomeless(new Animal.AnimalWeight(20, Animal.AnimalWeight.WeightType.KG)));
+        dogsLinkedList.add(Dog.ofHomeless(new Animal.AnimalWeight(20, Animal.AnimalWeight.WeightType.KG)));
 
         System.out.println("   ");
         int indexLinkedList = 0;
@@ -116,12 +112,12 @@ public class Main {
         }
 
         // Lesson #17 - Уровни доступа
-        // com.company.lesson8.Animal animalPrivateExample = new com.company.lesson8.Animal();
+        // Animal animalPrivateExample = new Animal();
 
         // Lesson #20 - equals и hashcode методы
-        Dog dogSharik = new Dog("Sharik", 5);
-        Dog dogBobik = new Dog("Bobik", 4);
-        Dog dogsharikVar1 = new Dog("Sharik", 5);
+        Dog dogSharik = new Dog("Sharik", new Animal.AnimalWeight(4, Animal.AnimalWeight.WeightType.KG));
+        Dog dogBobik = new Dog("Bobik", new Animal.AnimalWeight(3, Animal.AnimalWeight.WeightType.KG));
+        Dog dogsharikVar1 = new Dog("Sharik", new Animal.AnimalWeight(5, Animal.AnimalWeight.WeightType.KG));
 
         System.out.println("Operation '==' return: " + (dogSharik == dogSharik));
         System.out.println("Operation '==' return: " + (dogSharik == dogBobik));
