@@ -161,5 +161,7 @@ public class Main {
         } catch (Animal.WeightException ignore) {
             ignore.printStackTrace();
         }
+
+        // Lesson #30 - Лямбда операторы
     }
 }
