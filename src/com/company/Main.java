@@ -3,6 +3,7 @@ package com.company;
 import com.company.lesson16.SwitchExample;
 import com.company.lesson23.StringExample;
 import com.company.lesson24.TypeConversion;
+import com.company.lesson28.AnonExample;
 import com.company.lesson5.POJO;
 import com.company.lesson8.*;
 
@@ -149,5 +150,8 @@ public class Main {
         // Lesson #26 - абстрактные классы
         // NOTE: нельзя создать абстрактный класс
         // Bird bird = new Bird();
+
+        // Lesson #28 - Анонимные классы
+        AnonExample.run();
     }
 }
