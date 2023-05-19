@@ -4,6 +4,7 @@ import com.company.lesson16.SwitchExample;
 import com.company.lesson23.StringExample;
 import com.company.lesson24.TypeConversion;
 import com.company.lesson28.AnonExample;
+import com.company.lesson30.LambdaExample;
 import com.company.lesson5.POJO;
 import com.company.lesson8.*;
 
@@ -163,5 +164,6 @@ public class Main {
         }
 
         // Lesson #30 - Лямбда операторы
+        LambdaExample.run();
     }
 }
